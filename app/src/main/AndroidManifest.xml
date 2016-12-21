@@ -25,14 +25,7 @@
     <!-- shareSDK -->
     <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
-    <uses-permission android:name="android.permission.CALL_PHONE" />
-    <uses-permission android:name="android.permission.READ_CONTACTS" />
-    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.RECEIVE_SMS" />
-    <uses-permission android:name="android.permission.READ_SMS" />
 
     <!-- 友盟 -->
     <!--已加入-->
@@ -67,7 +60,7 @@
             android:value="30efa641e980489e9d5159cf8f7e1efa" />
 
         <!-- 友盟appkey -->
-        <meta-data android:value="582b00e05312ddbc21000bf5" android:name="UMENG_APPKEY"></meta-data>
+        <meta-data android:value="5859567ef29d983c1d002758" android:name="UMENG_APPKEY"></meta-data>
         <!--  <meta-data android:value="360" android:name="UMENG_CHANNEL"/>
           <meta-data android:value="baidu" android:name="UMENG_CHANNEL"/>
           <meta-data android:value="wandoujia" android:name="UMENG_CHANNEL"/>-->

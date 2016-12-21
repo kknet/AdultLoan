@@ -1,6 +1,8 @@
 package hainu.com.adultloan.fragment;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -137,8 +139,13 @@ public class HomePageFragment  extends Fragment {
         public Object instantiateItem(ViewGroup container, int position) {
             int newPosition = position % 4;
             ImageView imageView = new ImageView(getActivity());
-            imageView.setImageResource(iamges[newPosition]);
+            BitmapFactory.Options options = new BitmapFactory.Options();
+            options.inPreferredConfig = Bitmap.Config.RGB_565;
+            options.inSampleSize = 2;
+            Bitmap bitmap = BitmapFactory.decodeResource(getResources(), iamges[newPosition], options);
+            imageView.setImageBitmap(bitmap);
             imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
+
             container.addView(imageView);
             return imageView;
         }

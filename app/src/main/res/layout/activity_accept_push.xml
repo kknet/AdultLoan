@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFFFFF"
-    tools:context="zhiyuan.com.loan.activity.AcceptPushActivity">
+    tools:context="hainu.com.adultloan.activity.AcceptPushActivity">
     <RelativeLayout
         android:id="@+id/rl_home_top"
         android:layout_width="fill_parent"

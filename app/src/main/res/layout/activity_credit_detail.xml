@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="zhiyuan.com.loan.activity.CreditDetailActivity">
+    tools:context="activity.CreditDetailActivity">
     <RelativeLayout
         android:id="@+id/rl_credit_top"
         android:layout_width="match_parent"

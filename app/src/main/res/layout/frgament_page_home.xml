@@ -82,10 +82,11 @@
                 android:gravity="left"/>
         </LinearLayout>
 
-        <RelativeLayout
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
+            android:orientation="vertical"
             android:background="#FFFFFF">
             <TextView
                 android:id="@+id/tv_home_desc"
@@ -96,140 +97,19 @@
                 android:textColor="#FF7F00"
                 android:gravity="center"/>
             <LinearLayout
-                android:layout_below="@id/tv_home_desc"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:layout_height="wrap_content">
                 <RelativeLayout
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="wrap_content"
-                    android:paddingTop="20dp"
-                    android:paddingBottom="20dp">
-                    <TextView
-                        android:id="@+id/tv_home_moneys"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="10万-200万"
-                        android:layout_centerHorizontal="true"
-                        android:textSize="20sp"
-                        android:textColor="#FF0000"/>
-                    <TextView
-                        android:layout_below="@id/tv_home_moneys"
-                        android:layout_marginTop="10dp"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="贷款金额（元）"
-                        android:textSize="15sp"
-                        android:layout_centerHorizontal="true"/>
+                        android:src="@drawable/icon"/>
                 </RelativeLayout>
-                <RelativeLayout
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="wrap_content"
-                    android:paddingTop="10dp"
-                    android:paddingBottom="5dp"
-                    android:paddingLeft="20dp"
-                    android:paddingRight="20dp">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="借款周期"
-                        android:textSize="15sp"/>
-                    <TextView
-                        android:id="@+id/tv_home_mouth"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="3年~5年"
-                        android:textSize="15sp"
-                        android:layout_alignParentRight="true"/>
-
-                    <TextView
-                        android:id="@+id/tv_home_creditStep"
-                        android:layout_below="@id/tv_home_mouth"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="立即借款"
-                        android:textColor="#FFFFFF"
-                        android:layout_marginTop="5dp"
-                        android:paddingTop="10dp"
-                        android:paddingBottom="10dp"
-                        android:textSize="20sp"
-                        android:gravity="center"
-                        android:background="@drawable/bg_loan"
-                        android:layout_centerInParent="true"/>
-                </RelativeLayout>
-
             </LinearLayout>
-        </RelativeLayout>
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:background="#FFFFFF">
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <RelativeLayout
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="wrap_content"
-                    android:paddingTop="20dp"
-                    android:paddingBottom="2dp">
-                    <TextView
-                        android:id="@+id/tv_home_appname"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="宜人分期贷"
-                        android:layout_centerHorizontal="true"
-                        android:textSize="20sp"
-                        android:textColor="#FF0000"/>
-                    <TextView
-                        android:layout_below="@id/tv_home_appname"
-                        android:layout_marginTop="10dp"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="欢迎咨询"
-                        android:textSize="15sp"
-                        android:layout_centerHorizontal="true"/>
-                </RelativeLayout>
-                <RelativeLayout
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="wrap_content"
-                    android:paddingTop="2dp"
-                    android:paddingBottom="5dp"
-                    android:paddingLeft="20dp"
-                    android:paddingRight="20dp">
-                    <TextView
-                        android:id="@+id/tv_home_mm"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="工作时间在线接听"
-                        android:textSize="15sp"
-                        android:gravity="center"
-                        android:layout_alignParentRight="true"/>
-
-                    <TextView
-                        android:id="@+id/tv_home_creditcall"
-                        android:layout_below="@id/tv_home_mm"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="电话咨询"
-                        android:textColor="#FFFFFF"
-                        android:layout_marginTop="5dp"
-                        android:paddingTop="10dp"
-                        android:paddingBottom="10dp"
-                        android:textSize="20sp"
-                        android:gravity="center"
-                        android:background="@drawable/bg_loan"
-                        android:layout_centerInParent="true"/>
-                </RelativeLayout>
-
-            </LinearLayout>
-        </RelativeLayout>
+        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"

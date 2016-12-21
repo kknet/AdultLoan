@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFFFFF"
-    tools:context="zhiyuan.com.loan.activity.CollectArticleActivity">
+    tools:context="activity.CollectArticleActivity">
 
     <RelativeLayout
         android:id="@+id/rl_home_top"

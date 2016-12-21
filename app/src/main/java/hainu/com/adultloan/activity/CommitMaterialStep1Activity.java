@@ -73,7 +73,7 @@ public class CommitMaterialStep1Activity extends BaseActivity {
             Toast.makeText(CommitMaterialStep1Activity.this, "请输入金额", Toast.LENGTH_SHORT).show();
         }
         else if (mouth.equals("")){
-            Toast.makeText(CommitMaterialStep1Activity.this, "请输入海宽时间", Toast.LENGTH_SHORT).show();
+            Toast.makeText(CommitMaterialStep1Activity.this, "请输入贷款时间", Toast.LENGTH_SHORT).show();
         }
         else if (name.equals("")){
             Toast.makeText(CommitMaterialStep1Activity.this, "请输入姓名", Toast.LENGTH_SHORT).show();

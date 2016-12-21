@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="zhiyuan.com.loan.activity.ModifyAccountItemActivity">
+    tools:context="activity.ModifyAccountItemActivity">
 
     <RelativeLayout
         android:id="@+id/rl_home_top"

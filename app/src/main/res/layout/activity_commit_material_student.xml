@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
+<LinearLayout android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
-    tools:context="activity.LookupApplyActivity">
+    android:background="#FFFFFF"
+    tools:context="hainu.com.adultloan.activity.CommitMaterialStudentActivity"
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
     <RelativeLayout
         android:id="@+id/rl_credit_top"
@@ -27,43 +28,44 @@
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
             android:layout_centerInParent="true"
-            android:text="申请记录"
+            android:text="填写申请"
             android:gravity="center"
             android:textColor="#000"
             android:textSize="20sp"/>
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="#F4F4F4"
-            android:layout_alignParentBottom="true"></View>
     </RelativeLayout>
-    <TextView
-        android:id="@+id/tv_lookup_histery"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="暂无申请记录"
-        android:textSize="15sp"
-        android:gravity="center"/>
-
-    <TextView
-        android:id="@+id/tv__loock_hadcommit"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:textSize="20sp"
-        android:textColor="#006400"
-        android:text="资料已提交，正在审核..."
-        android:visibility="gone"/>
 
     <ScrollView
-        android:id="@+id/sv_lookup_svro"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:visibility="gone">
+        android:layout_height="wrap_content">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF"
+                android:layout_marginTop="2dp"
+                android:paddingLeft="10dp">
+                <ImageView
+                    android:id="@+id/iv_spaker"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/speaker"/>
+                <TextView
+                    android:id="@+id/tv_commit_contactinf"
+                    android:layout_toRightOf="@id/iv_spaker"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#FF7F00"
+                    android:layout_marginTop="5dp"
+                    android:paddingLeft="10dp"
+                    android:layout_centerVertical="true"
+                    android:paddingRight="10dp"/>
+            </RelativeLayout>
+
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -78,23 +80,26 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
                     <ImageView
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
                         android:src="@drawable/application_condition_icon"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:text="申请金额"
+                        android:text="申请金额（2000-50000）"
                         android:textColor="#05BDA7"
+                        android:textSize="15sp"
                         android:gravity="center"/>
                 </LinearLayout>
 
-                <TextView
-                    android:id="@+id/tv_histery_record"
+                <EditText
+                    android:id="@+id/et_commit_count"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:padding="5dp"
-                    android:layout_marginBottom="2dp"/>
+                    android:background="@drawable/bg_edit"
+                    android:textColorHint="#c6c3c3"
+                    android:layout_marginBottom="2dp" />
             </LinearLayout>
 
             <LinearLayout
@@ -110,23 +115,26 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
                     <ImageView
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
                         android:src="@drawable/application_condition_icon"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:text="月数"
+                        android:text="月数（1~36个月）"
+                        android:textSize="15sp"
                         android:textColor="#05BDA7"
                         android:gravity="center"/>
                 </LinearLayout>
 
-                <TextView
-                    android:id="@+id/tv_histery_grade"
+                <EditText
+                    android:id="@+id/et_commit_mouth"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:padding="5dp"
-                    android:layout_marginBottom="2dp"/>
+                    android:background="@drawable/bg_edit"
+                    android:textColorHint="#c6c3c3"
+                    android:layout_marginBottom="2dp" />
             </LinearLayout>
 
             <LinearLayout
@@ -142,22 +150,60 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
                     <ImageView
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
                         android:src="@drawable/application_condition_icon"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:text="姓名"
+                        android:textSize="15sp"
                         android:textColor="#05BDA7"
                         android:gravity="center"/>
                 </LinearLayout>
 
-                <TextView
-                    android:id="@+id/tv_histery_name"
+                <EditText
+                    android:id="@+id/et_commit_name"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:padding="5dp"
+                    android:background="@drawable/bg_edit"
+                    android:textColorHint="#c6c3c3"
+                    android:layout_marginBottom="2dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#FFFFFF"
+                android:layout_marginTop="5dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/application_condition_icon"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="电话号码"
+                        android:textSize="15sp"
+                        android:textColor="#05BDA7"
+                        android:gravity="center"/>
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/et_commit_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:background="@drawable/bg_edit"
+                    android:textColorHint="#c6c3c3"
                     android:layout_marginBottom="2dp"
                     />
             </LinearLayout>
@@ -175,23 +221,26 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
                     <ImageView
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
                         android:src="@drawable/application_condition_icon"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:text="qq号"
+                        android:textSize="15sp"
                         android:textColor="#05BDA7"
                         android:gravity="center"/>
                 </LinearLayout>
 
-                <TextView
-                    android:id="@+id/tv_histery_qq"
+                <EditText
+                    android:id="@+id/et_commit_qq"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:padding="5dp"
-                    android:layout_marginBottom="2dp"/>
+                    android:background="@drawable/bg_edit"
+                    android:textColorHint="#c6c3c3"
+                    android:layout_marginBottom="2dp" />
             </LinearLayout>
 
             <LinearLayout
@@ -207,24 +256,26 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
                     <ImageView
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
                         android:src="@drawable/application_condition_icon"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:text="身份证号"
+                        android:textSize="15sp"
                         android:textColor="#05BDA7"
                         android:gravity="center"/>
                 </LinearLayout>
 
-                <TextView
-                    android:id="@+id/tv_histery_certif"
+                <EditText
+                    android:id="@+id/et_commit_certif"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:padding="5dp"
-                    android:layout_marginBottom="2dp"
-                    />
+                    android:background="@drawable/bg_edit"
+                    android:textColorHint="#c6c3c3"
+                    android:layout_marginBottom="2dp" />
             </LinearLayout>
 
             <LinearLayout
@@ -240,23 +291,26 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
                     <ImageView
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
                         android:src="@drawable/application_condition_icon"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:text="学信网账号"
                         android:textColor="#05BDA7"
+                        android:textSize="15sp"
                         android:gravity="center"/>
                 </LinearLayout>
 
-                <TextView
-                    android:id="@+id/tv_histery_acount"
+                <EditText
+                    android:id="@+id/et_commit_acount"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:padding="5dp"
-                    android:layout_marginBottom="2dp"/>
+                    android:background="@drawable/bg_edit"
+                    android:textColorHint="#c6c3c3"
+                    android:layout_marginBottom="2dp" />
             </LinearLayout>
 
             <LinearLayout
@@ -272,28 +326,42 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
                     <ImageView
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
                         android:src="@drawable/application_condition_icon"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:text="学信网密码"
                         android:textColor="#05BDA7"
+                        android:textSize="15sp"
                         android:gravity="center"/>
                 </LinearLayout>
 
-                <TextView
-                    android:id="@+id/tv_histery_password"
+                <EditText
+                    android:id="@+id/et_commit_password"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:padding="5dp"
-                    android:layout_marginBottom="2dp"/>
+                    android:background="@drawable/bg_edit"
+                    android:textColorHint="#c6c3c3"
+                    android:layout_marginBottom="2dp" />
             </LinearLayout>
 
-
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:text="提交申请"
+                android:layout_margin="10dp"
+                android:onClick="commitInfo"
+                android:padding="5dp"
+                android:textSize="20sp"
+                android:textColor="@color/white"
+                android:background="@drawable/bg_button"/>
         </LinearLayout>
     </ScrollView>
-
 
 </LinearLayout>

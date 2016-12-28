@@ -15,6 +15,7 @@ public class ApplyInfo extends BmobObject {
     private String money;
     private String mouths;
     private String phone;
+    private String applyType;
 
     public ApplyInfo(String applyId, String name, String qq, String certificate, String province, String weixin, String money, String mouths, String phone) {
         this.applyId = applyId;
@@ -26,6 +27,19 @@ public class ApplyInfo extends BmobObject {
         this.money = money;
         this.mouths = mouths;
         this.phone = phone;
+    }
+
+    public ApplyInfo(String applyId, String name, String qq, String certificate, String province, String weixin, String money, String mouths, String phone, String applyType) {
+        this.applyId = applyId;
+        this.name = name;
+        this.qq = qq;
+        this.certificate = certificate;
+        this.province = province;
+        this.weixin = weixin;
+        this.money = money;
+        this.mouths = mouths;
+        this.phone = phone;
+        this.applyType = applyType;
     }
 
     public String getApplyId() {
@@ -98,5 +112,13 @@ public class ApplyInfo extends BmobObject {
 
     public void setPhone(String phone) {
         this.phone = phone;
+    }
+
+    public String getApplyType() {
+        return applyType;
+    }
+
+    public void setApplyType(String applyType) {
+        this.applyType = applyType;
     }
 }

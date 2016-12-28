@@ -15,12 +15,33 @@
         android:textColor="#006400"
         android:layout_marginTop="200dp"/>
 
+    <RelativeLayout
+        android:id="@+id/contact_qq"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:layout_below="@id/text"
+        android:visibility="gone">
+        <TextView
+            android:id="@+id/qq"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0000000"
+            android:gravity="center"
+            android:textColor="#FF7F00"/>
+    </RelativeLayout>
+
+
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="80dp"
         android:layout_height="wrap_content"
         android:text="知道啦"
         android:background="@drawable/bg_button"
         android:onClick="knowIt"
-        android:layout_centerInParent="true"/>
+        android:padding="5dp"
+        android:layout_below="@id/contact_qq"
+        android:layout_marginTop="100dp"
+        android:layout_centerHorizontal="true"/>
 
 </RelativeLayout>

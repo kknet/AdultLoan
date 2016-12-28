@@ -68,13 +68,11 @@ public class SplashActivity extends BaseActivity {
                     boolean forceWhenUpdate = apk.isForceWhenUpdate();
                     boolean updateWhenOpen = apk.isUpdateWhenOpen();
                     String qqContactInfo = apk.getQqContactInfo();
-                    String contactPhone = apk.getContactPhone();
 
                     Log.i(TAG,"versionCode:"+versionCode+",apkUrl:"+apkUrl+",forceWhenUpdate:"+forceWhenUpdate+",updateWhenOpen:"+updateWhenOpen);
                     MyApplication.sharedPreferences.edit().putInt("versionCode",versionCode).apply();
                     MyApplication.sharedPreferences.edit().putString("apkUrl",apkUrl).apply();
                     MyApplication.sharedPreferences.edit().putString("qqContactInfo",qqContactInfo).apply();
-                    MyApplication.sharedPreferences.edit().putString("contactPhone",contactPhone).apply();
                     MyApplication.sharedPreferences.edit().putBoolean("forceWhenUpdate",forceWhenUpdate).apply();
                     MyApplication.sharedPreferences.edit().putBoolean("updateWhenOpen",updateWhenOpen).apply();
                 }

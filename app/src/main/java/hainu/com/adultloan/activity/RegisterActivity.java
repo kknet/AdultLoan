@@ -44,11 +44,9 @@ public class RegisterActivity extends BaseActivity {
     private EditText et_register_password;
     private EditText et_register_repassword;
     private EditText et_register_qq;
-    private EditText et_register_email;
     private String verifycode;
     private Button bu_register_getvercode;
     private String qq;
-    private String email;
     private String password;
     private String phone;
     private int MSG_UPDATE= 1;
@@ -75,7 +73,6 @@ public class RegisterActivity extends BaseActivity {
         et_register_password = (EditText) findViewById(R.id.et_register_password);
         et_register_repassword = (EditText) findViewById(R.id.et_register_repassword);
         et_register_qq = (EditText) findViewById(R.id.et_register_qq);
-        et_register_email = (EditText) findViewById(R.id.et_register_email);
         bu_register_getvercode = (Button) findViewById(R.id.bu_register_getvercode);
     }
 
@@ -156,7 +153,6 @@ public class RegisterActivity extends BaseActivity {
                 user.setPhone(phone);
                 user.setPassword(password);
                 user.setQq(qq);
-                user.setEmail(email);
                 user.setUserId("aa"+ System.currentTimeMillis());
                 insertToDB(user);
             }
@@ -224,7 +220,7 @@ public class RegisterActivity extends BaseActivity {
         password = et_register_password.getText().toString();
         String confirmpassword = et_register_repassword.getText().toString();
         qq = et_register_qq.getText().toString();
-        email = et_register_email.getText().toString();
+
 
         if (phone.isEmpty()){
             Toast.makeText(this,"请输入手机号", Toast.LENGTH_SHORT).show();
@@ -241,9 +237,6 @@ public class RegisterActivity extends BaseActivity {
         }
         else if(qq.isEmpty()){
             Toast.makeText(this,"请输入qq", Toast.LENGTH_SHORT).show();
-        }
-        else if(email.isEmpty()){
-            Toast.makeText(this,"请输入邮箱", Toast.LENGTH_SHORT).show();
         }
         else {
             //先将短信提交到shareSDK进行短信验证

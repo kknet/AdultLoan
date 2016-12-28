@@ -18,11 +18,10 @@ public class LookupApplyActivity extends BaseActivity {
     private TextView tv_histery_name;
     private TextView tv_histery_certif;
     private TextView tv_histery_qq;
-    private TextView tv_histery_time;
-    private TextView tv_histery_money;
-    private TextView tv_histery_weixin;
-    private TextView tv_histery_phone;
-    private TextView tv_histery_area;
+    private TextView tv_histery_password;
+    private TextView tv_histery_acount;
+    private TextView tv_histery_record;
+    private TextView tv_histery_grade;
     private String applyId;
 
     @Override
@@ -36,24 +35,25 @@ public class LookupApplyActivity extends BaseActivity {
     private void initView() {
         TextView tv_lookup_histery = (TextView) findViewById(R.id.tv_lookup_histery);
         ScrollView sv_lookup_svro = (ScrollView) findViewById(R.id.sv_lookup_svro);
+        TextView tv__loock_hadcommit = (TextView) findViewById(R.id.tv__loock_hadcommit);
+
 
         applyId = MyApplication.sharedPreferences.getString("applyId", "");
         if (!applyId.equals("")){
             tv_lookup_histery.setVisibility(View.GONE);
-            sv_lookup_svro.setVisibility(View.VISIBLE);
-            tv_histery_name = (TextView) findViewById(R.id.tv_histery_name);
+            tv__loock_hadcommit.setVisibility(View.VISIBLE);
+            /*tv_histery_name = (TextView) findViewById(R.id.tv_histery_name);
             tv_histery_qq = (TextView) findViewById(R.id.tv_histery_qq);
             tv_histery_certif = (TextView) findViewById(R.id.tv_histery_certif);
-            tv_histery_money = (TextView) findViewById(R.id.tv_histery_money);
-            tv_histery_time = (TextView) findViewById(R.id.tv_histery_time);
-            tv_histery_weixin = (TextView) findViewById(R.id.tv_histery_weixin);
-            tv_histery_phone = (TextView) findViewById(R.id.tv_histery_phone);
-            tv_histery_area = (TextView) findViewById(R.id.tv_histery_area);
+            tv_histery_acount = (TextView) findViewById(R.id.tv_histery_acount);
+            tv_histery_password = (TextView) findViewById(R.id.tv_histery_password);
+            tv_histery_record = (TextView) findViewById(R.id.tv_histery_record);
+            tv_histery_grade = (TextView) findViewById(R.id.tv_histery_grade);
 
-            loadData();
+            loadData();*/
         }
     }
-    private void loadData() {
+    /*private void loadData() {
         BmobQuery<ApplyInfo> applyInfoBmobQuery = new BmobQuery<>();
 
         applyInfoBmobQuery.addWhereEqualTo("applyId",applyId);
@@ -65,11 +65,10 @@ public class LookupApplyActivity extends BaseActivity {
                     tv_histery_name.setText(applyInfo.getName());
                     tv_histery_qq.setText(applyInfo.getQq());
                     tv_histery_certif.setText(applyInfo.getCertificate());
-                    tv_histery_weixin.setText(applyInfo.getWeixin());
-                    tv_histery_money.setText(applyInfo.getMoney());
-                    tv_histery_time.setText(applyInfo.getMouths());
-                    tv_histery_area.setText(applyInfo.getProvince());
-                    tv_histery_phone.setText(applyInfo.getPhone());
+                    tv_histery_acount.setText(applyInfo.getAccount());
+                    tv_histery_password.setText(applyInfo.getPassword());
+                    tv_histery_record.setText(applyInfo.getRecord());
+                    tv_histery_grade.setText(applyInfo.getGrade());
                 }
             }
 
@@ -78,7 +77,7 @@ public class LookupApplyActivity extends BaseActivity {
 
             }
         });
-    }
+    }*/
 
     public void back(View view){
         finish();

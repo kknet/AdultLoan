@@ -111,6 +111,7 @@ public class InstallGuideActivity extends BaseActivity {
             ImageView imageView = new ImageView(InstallGuideActivity.this);
             BitmapFactory.Options options = new BitmapFactory.Options();
             options.inPreferredConfig = Bitmap.Config.RGB_565;
+            options.inSampleSize = 2;
             Bitmap bitmap = BitmapFactory.decodeResource(getResources(), imageArg[position], options);
             imageView.setImageBitmap(bitmap);
             container.addView(imageView);

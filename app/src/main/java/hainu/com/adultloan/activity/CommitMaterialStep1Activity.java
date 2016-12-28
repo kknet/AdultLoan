@@ -86,7 +86,9 @@ public class CommitMaterialStep1Activity extends BaseActivity {
         }
         else {
             applyId = "appid"+ System.currentTimeMillis();
-            ApplyInfo applyInfo = new ApplyInfo(applyId,name,qq,certicate,area,weixin,count,mouth,phone);
+            Intent intent = getIntent();
+            String applyType = intent.getStringExtra("applyType");
+            ApplyInfo applyInfo = new ApplyInfo(applyId,name,qq,certicate,area,weixin,count,mouth,phone,applyType);
             applyInfo.setPhone(phone);
             uploadData(applyInfo);
         }

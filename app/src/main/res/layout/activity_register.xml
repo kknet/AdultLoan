@@ -178,38 +178,7 @@
                 style="@style/editorStyle"
                 android:textSize="15.0sp" />
         </RelativeLayout>
-        <RelativeLayout
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:layout_weight="1.0"
-            android:orientation="horizontal"
-            android:paddingLeft="10dp"
-            android:paddingRight="10dp">
 
-            <TextView
-                android:id="@+id/tv_register_text2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:text="邮箱："
-                android:textColor="#ff1a1a1a"
-                android:textSize="15.0sp" />
-
-
-            <EditText
-                android:id="@+id/et_register_email"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:layout_toLeftOf="@id/main_login_account_del"
-                android:layout_toRightOf="@id/tv_register_text2"
-                android:background="@drawable/text_edit_bg"
-                android:singleLine="true"
-                android:textColor="#ff1a1a1a"
-                style="@style/editorStyle"
-                android:textSize="15.0sp" />
-        </RelativeLayout>
     </LinearLayout>
 
     <LinearLayout

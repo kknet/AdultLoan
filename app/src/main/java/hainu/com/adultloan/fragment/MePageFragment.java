@@ -214,10 +214,10 @@ public class MePageFragment extends Fragment {
                         startActivity(new Intent(getActivity(),LoginActivity.class));
                     }
                     break;
-                /*case R.id.ll_me_invite:
+                case R.id.ll_me_invite:
 
-                    share();
-                    break;*/
+                    //share();
+                    break;
                 case R.id.ll_me_applyhis:
                     startActivity(new Intent(getActivity(), LookupApplyActivity.class));
 
@@ -258,8 +258,7 @@ public class MePageFragment extends Fragment {
 
         // 启动分享GUI
         oks.show(getActivity());
-    }
-*/
+    }*/
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (resultCode== Activity.RESULT_OK && requestCode==120){

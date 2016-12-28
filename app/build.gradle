@@ -8,8 +8,8 @@ android {
         applicationId "hainu.com.adultloan"
         minSdkVersion 11
         targetSdkVersion 23
-        versionCode 3
-        versionName "3.0"
+        versionCode 22
+        versionName "2.2"
         /*multiDexEnabled true*/
     }
     buildTypes {

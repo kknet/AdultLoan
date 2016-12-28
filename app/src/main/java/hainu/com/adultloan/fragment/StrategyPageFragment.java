@@ -68,7 +68,7 @@ public class StrategyPageFragment extends Fragment {
                 Log.i(TAG,"loadMore");
                 BmobQuery<StrategyArticle> bmobQuery = new BmobQuery<>();
                 bmobQuery.setLimit(10);
-                Log.i(TAG,"articleListListContent.get(0):"+articleListListContent.get(0));
+                Log.i(TAG,"lastAritcleID:"+lastAritcleID);
                 bmobQuery.addWhereGreaterThan("articleId",lastAritcleID);
                 bmobQuery.findObjects(getActivity(), new FindListener<StrategyArticle>() {
                     @Override
@@ -92,7 +92,7 @@ public class StrategyPageFragment extends Fragment {
                                 }
 
                                 articleListListContent.add(list.get(i));
-                                Log.i(TAG,"list.get(i):"+articleListListContent.get(i).toString());
+                                Log.i(TAG,"list.get(i):"+list.get(i).toString());
                             }
                         }
 
@@ -161,7 +161,8 @@ public class StrategyPageFragment extends Fragment {
     //加载初始化数据
     private void loadInitData() {
         BmobQuery<StrategyArticle> bmobQuery = new BmobQuery<>();
-        bmobQuery.setLimit(10);
+
+        bmobQuery.order("articleId");
         bmobQuery.findObjects(getActivity(), new FindListener<StrategyArticle>() {
             @Override
             public void onSuccess(List<StrategyArticle> list) {

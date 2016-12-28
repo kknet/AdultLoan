@@ -21,6 +21,7 @@ import com.umeng.analytics.MobclickAgent;
 
 import hainu.com.adultloan.R;
 import hainu.com.adultloan.activity.CommitMaterialStep1Activity;
+import hainu.com.adultloan.activity.CommitMaterialStudentActivity;
 import hainu.com.adultloan.activity.CreditPlatListActivity;
 import hainu.com.adultloan.activity.HomeActivity;
 import hainu.com.adultloan.application.MyApplication;
@@ -49,16 +50,27 @@ public class HomePageFragment  extends Fragment {
 
     private void initView() {
         initViewPage();
-        TextView tv_home_creditStep = (TextView) inflate.findViewById(R.id.tv_home_creditStep);
-        TextView tv_home_creditcall = (TextView) inflate.findViewById(R.id.tv_home_creditcall);
+
         RelativeLayout rl_home_creditClass = (RelativeLayout) inflate.findViewById(R.id.rl_home_creditClass);
         RelativeLayout rl_home_consult = (RelativeLayout) inflate.findViewById(R.id.rl_home_consult);
 
+        LinearLayout ll_type_car = (LinearLayout) inflate.findViewById(R.id.ll_type_car);
+        LinearLayout ll_type_house = (LinearLayout) inflate.findViewById(R.id.ll_type_house);
+        LinearLayout ll_type_xindai = (LinearLayout) inflate.findViewById(R.id.ll_type_xindai);
+        LinearLayout ll_type_card = (LinearLayout) inflate.findViewById(R.id.ll_type_card);
+        LinearLayout ll_type_student = (LinearLayout) inflate.findViewById(R.id.ll_type_student);
+        LinearLayout ll_type_other = (LinearLayout) inflate.findViewById(R.id.ll_type_other);
+
         HomeOnClickListener homeOnClickListener = new HomeOnClickListener();
-        tv_home_creditStep.setOnClickListener(homeOnClickListener);
-        tv_home_creditcall.setOnClickListener(homeOnClickListener);
         rl_home_creditClass.setOnClickListener(homeOnClickListener);
         rl_home_consult.setOnClickListener(homeOnClickListener);
+
+        ll_type_car.setOnClickListener(homeOnClickListener);
+        ll_type_house.setOnClickListener(homeOnClickListener);
+        ll_type_xindai.setOnClickListener(homeOnClickListener);
+        ll_type_card.setOnClickListener(homeOnClickListener);
+        ll_type_student.setOnClickListener(homeOnClickListener);
+        ll_type_other.setOnClickListener(homeOnClickListener);
 
     }
     private void initViewPage() {
@@ -161,12 +173,6 @@ public class HomePageFragment  extends Fragment {
         @Override
         public void onClick(View v) {
             switch (v.getId()){
-                case R.id.tv_home_creditStep:
-                    startActivity(new Intent(getActivity(), CommitMaterialStep1Activity.class));
-                    break;
-                case R.id.tv_home_creditcall:
-                    calling();
-                    break;
                 case R.id.rl_home_creditClass:
                     getActivity().startActivity(new Intent(getActivity(), CreditPlatListActivity.class));
                     break;
@@ -177,21 +183,39 @@ public class HomePageFragment  extends Fragment {
                     ConsultPageFragment consultPageFragment = (ConsultPageFragment) activity.pageFragments.get(1);
                     consultPageFragment.switchState(1);
                     break;
+
+                case R.id.ll_type_car:
+                    Intent intent1 = new Intent(getActivity(), CommitMaterialStep1Activity.class);
+                    intent1.putExtra("applyType","车贷");
+                    getActivity().startActivity(intent1);
+                    break;
+                case R.id.ll_type_house:
+                    Intent intent2 = new Intent(getActivity(), CommitMaterialStep1Activity.class);
+                    intent2.putExtra("applyType","房贷");
+                    getActivity().startActivity(intent2);;
+                    break;
+                case R.id.ll_type_xindai:
+                    Intent intent3 = new Intent(getActivity(), CommitMaterialStep1Activity.class);
+                    intent3.putExtra("applyType","信贷");
+                    getActivity().startActivity(intent3);
+                    break;
+                case R.id.ll_type_card:
+                    Intent intent4 = new Intent(getActivity(), CommitMaterialStep1Activity.class);
+                    intent4.putExtra("applyType","信用卡申请");
+                    getActivity().startActivity(intent4);
+                    break;
+                case R.id.ll_type_student:
+                    getActivity().startActivity(new Intent(getActivity(), CommitMaterialStudentActivity.class));
+                    break;
+                case R.id.ll_type_other:
+                    Intent intent5 = new Intent(getActivity(), CommitMaterialStep1Activity.class);
+                    intent5.putExtra("applyType","其他");
+                    getActivity().startActivity(intent5);
+                    break;
             }
         }
     }
 
-    private void calling() {
-        String phone = "0000000";
-        String contactPhone = MyApplication.sharedPreferences.getString("contactPhone", "");
-        if (!contactPhone.equals("")){
-            phone = contactPhone;
-        }
-        MobclickAgent.onEvent(getActivity(), "calling");
-        Intent intent = new Intent(Intent.ACTION_CALL);
-        intent.setData(Uri.parse("tel:"+phone));
-        startActivity(intent);
-    }
 
 
 }
